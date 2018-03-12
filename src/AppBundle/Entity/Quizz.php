@@ -218,4 +218,15 @@ class Quizz
     {
         return $this->beacon;
     }
+
+    public function update($quizz)
+    {
+        $this
+            ->setTitle($quizz->getTitle())
+            ->setDuration($quizz->getDuration())
+            ->setDifficulty($quizz->getDifficulty())
+            ->setColor($quizz->getColor());
+
+        return $this;
+    }
 }
